@@ -23,3 +23,14 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+// Get a reference to the button
+const bgButton = document.querySelector('#bg-button');
+
+// Add an event listener to the button
+bgButton.addEventListener('click', function() {
+	// When the button is clicked, update the background color of the body on all pages
+	document.querySelectorAll('body').forEach(function(body) {
+	  body.style.backgroundColor = 'black';
+	});
+  });
