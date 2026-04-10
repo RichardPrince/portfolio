@@ -48,7 +48,7 @@ export default function Skills() {
         </h2>
       </RevealItem>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 auto-rows-min">
         {skillGroups.map((group, gi) => (
           <motion.div
             key={group.label}
@@ -58,7 +58,7 @@ export default function Skills() {
             viewport={{ once: true }}
             transition={{ delay: gi * 0.08, duration: 0.5, ease: EASE.out }}
           >
-            <h3 className="text-text-muted text-xs tracking-[0.2em] uppercase font-body font-medium mb-4">
+            <h3 className="text-text-muted text-sm font-semibold tracking-[0.2em] uppercase font-body mb-3">
               {group.label}
             </h3>
             <div className="flex flex-wrap gap-2">
