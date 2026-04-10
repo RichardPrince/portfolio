@@ -42,9 +42,9 @@ export default function About() {
         <div className="md:w-[88%]">
           <RevealItem>
             <h2 className="font-display text-3xl md:text-4xl text-text-primary font-semibold mb-8 leading-tight">
-              I build systems that stay up
+              I build systems that stay up{' '}
               <br />
-              <span className="text-text-muted">{' '}when it matters most.</span>
+              <span className="text-text-muted">when it matters most.</span>
             </h2>
           </RevealItem>
 

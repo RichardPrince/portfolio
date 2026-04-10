@@ -43,9 +43,12 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] text-text-primary font-semibold leading-[1.02] mb-6">
-          <span className="block">Richard</span>
-          <span className="block">Prince</span>
+        <h1
+          className="font-display text-5xl md:text-7xl lg:text-[5.5rem] text-text-primary font-semibold leading-[1.02] mb-6"
+          aria-label="Richard Prince"
+        >
+          <span className="block" aria-hidden="true">Richard</span>
+          <span className="block" aria-hidden="true">Prince</span>
         </h1>
 
         <motion.p
