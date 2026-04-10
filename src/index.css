@@ -52,6 +52,10 @@ html {
   scroll-padding-top: 5rem;
 }
 
+.project-row {
+  scroll-margin-top: 5rem;
+}
+
 body {
   margin: 0;
   background-color: var(--color-bg);
