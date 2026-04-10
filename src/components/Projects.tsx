@@ -20,17 +20,17 @@ export default function Projects() {
     setOpenIndex(isOpening ? i : null)
 
     if (isOpening) {
-      // Wait for the expand animation to start, then scroll the row into view
+      // Wait for the expand animation (500ms) to complete, then scroll
       setTimeout(() => {
         const el = itemRefs.current[i]
         if (!el) return
         const lenis = getLenis()
         if (lenis) {
-          lenis.scrollTo(el, { offset: -100, duration: 0.8 })
+          lenis.scrollTo(el, { offset: -80, duration: 1, lock: true })
         } else {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
-      }, 100)
+      }, 550)
     }
   }
 

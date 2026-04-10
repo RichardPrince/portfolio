@@ -73,7 +73,7 @@ export default function ProjectItem({ project, isOpen, onToggle }: ProjectItemPr
                   <img
                     src={project.image}
                     alt={`${project.name} screenshot`}
-                    className="w-full max-w-xl rounded-lg"
+                    className="w-full max-w-md md:max-w-lg max-h-[40vh] object-cover rounded-lg"
                     loading="lazy"
                     decoding="async"
                   />
