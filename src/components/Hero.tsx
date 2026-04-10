@@ -12,7 +12,7 @@ export default function Hero() {
         className="absolute right-[-5%] top-1/2 -translate-y-1/2 font-display text-[20rem] md:text-[28rem] lg:text-[36rem] font-bold text-white/[0.02] leading-none select-none pointer-events-none"
         aria-hidden="true"
       >
-        01
+        RP
       </div>
 
       {/* Horizon line */}
@@ -43,11 +43,10 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] text-text-primary font-semibold leading-[1.02] mb-2">
-          Richard
-        </h1>
         <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] text-text-primary font-semibold leading-[1.02] mb-6">
-          Prince        </h1>
+          <span className="block">Richard</span>
+          <span className="block">Prince</span>
+        </h1>
 
         <motion.p
           className="font-body text-lg md:text-xl text-text-muted font-medium tracking-wide"
@@ -91,13 +90,14 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="text-text-muted text-sm font-body font-medium hover:text-gold transition-colors duration-200 cursor-pointer"
+            className="group text-text-muted text-sm font-body font-medium hover:text-text-primary transition-colors duration-200 cursor-pointer inline-flex items-center gap-2"
             onClick={(e) => {
               e.preventDefault()
               document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
             }}
           >
             Get in Touch
+            <span className="inline-block group-hover:translate-x-0.5 transition-transform duration-200">→</span>
           </a>
         </motion.div>
       </div>

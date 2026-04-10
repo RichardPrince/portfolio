@@ -62,7 +62,8 @@ export default function Contact() {
         <h2 className="font-display text-4xl md:text-6xl lg:text-7xl text-text-primary font-semibold leading-tight mb-4">
           Let's build
           <br />
-          something        </h2>
+          {' '}something
+        </h2>
       </RevealItem>
 
       <RevealItem>

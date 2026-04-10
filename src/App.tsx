@@ -21,11 +21,11 @@ function App() {
       <GradientBlob color="#1a1a4a10" size={400} x="-5%" y="70%" speed={16} />
 
       {/* Skip link for keyboard navigation */}
-      <a href="#about" className="skip-link">Skip to content</a>
+      <a href="#main" className="skip-link">Skip to content</a>
 
       {/* Content */}
       <Navbar />
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <Skills />
