@@ -6,12 +6,33 @@ import ProjectItem from './ProjectItem'
 import TextReveal from './TextReveal'
 import { projects } from '../data/projects'
 import { shouldReduceMotion, fadeUp, EASE } from '../lib/animations'
+import { getLenis } from '../hooks/useLenis'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Projects() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const rowsRef = useRef<HTMLDivElement>(null)
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  const handleToggle = (i: number) => {
+    const isOpening = openIndex !== i
+    setOpenIndex(isOpening ? i : null)
+
+    if (isOpening) {
+      // Wait for the expand animation to start, then scroll the row into view
+      setTimeout(() => {
+        const el = itemRefs.current[i]
+        if (!el) return
+        const lenis = getLenis()
+        if (lenis) {
+          lenis.scrollTo(el, { offset: -100, duration: 0.8 })
+        } else {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
+  }
 
   useEffect(() => {
     if (!rowsRef.current || shouldReduceMotion) return
@@ -62,11 +83,15 @@ export default function Projects() {
 
       <div ref={rowsRef}>
         {projects.map((project, i) => (
-          <div key={project.number} className="project-row">
+          <div
+            key={project.number}
+            className="project-row"
+            ref={(el) => { itemRefs.current[i] = el }}
+          >
             <ProjectItem
               project={project}
               isOpen={openIndex === i}
-              onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+              onToggle={() => handleToggle(i)}
             />
           </div>
         ))}
