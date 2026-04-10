@@ -25,7 +25,7 @@ export const projects: Project[] = [
     description:
       'Portfolio-worthy Pomodoro timer with a soft organic aesthetic. Features configurable work/break durations, session tracking with daily stats, auto-start, light/dark mode, browser notifications, keyboard shortcuts, and PWA support for mobile install.',
     techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-    url: 'https://github.com/RichardPrince/pomodoro',
+    url: 'https://rp-pomodoro.vercel.app',
     techLine: 'React / TypeScript / Tailwind',
     image: '/projects/pomodoro.png',
   },
