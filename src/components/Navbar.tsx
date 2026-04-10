@@ -62,7 +62,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="relative text-xs font-body font-medium text-text-muted/70 hover:text-text-primary tracking-[0.15em] uppercase transition-colors duration-200 cursor-pointer group"
+                className="relative py-3 -my-3 text-xs font-body font-medium text-text-muted/70 hover:text-text-primary tracking-[0.15em] uppercase transition-colors duration-200 cursor-pointer group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-full h-px bg-gold origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
