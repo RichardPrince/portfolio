@@ -21,6 +21,16 @@ export const projects: Project[] = [
   },
   {
     number: '02',
+    name: 'Pomodoro Timer',
+    description:
+      'Portfolio-worthy Pomodoro timer with a soft organic aesthetic. Features configurable work/break durations, session tracking with daily stats, auto-start, light/dark mode, browser notifications, keyboard shortcuts, and PWA support for mobile install.',
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    url: 'https://github.com/RichardPrince/pomodoro',
+    techLine: 'React / TypeScript / Tailwind',
+    image: '/projects/pomodoro.png',
+  },
+  {
+    number: '03',
     name: 'Pokedex',
     description:
       'A React-based Pokedex built with Vite that renders original Pokemon sprites in a clean, browsable interface. A quick project born out of an appreciation for the classic sprite art.',
@@ -30,7 +40,7 @@ export const projects: Project[] = [
     image: '/projects/pokedex.png',
   },
   {
-    number: '03',
+    number: '04',
     name: 'Chicky Apiary',
     description:
       'Bee-themed portfolio website built for a social media and marketing professional. Custom design with playful branding, responsive layout, and clean presentation of client work and services.',
@@ -40,7 +50,7 @@ export const projects: Project[] = [
     image: '/projects/chicky-apiary.png',
   },
   {
-    number: '04',
+    number: '05',
     name: 'OC Auto Repair',
     description:
       'Full website for a family-owned auto repair shop in Fountain Valley, CA. Features service listings, reviews integration, business hours, and a click-to-call CTA. Built for trust and local SEO with fast load times and mobile-first design.',
